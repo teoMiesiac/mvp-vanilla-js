@@ -7,7 +7,7 @@ Project was inspired by [Learning JavaScript Patterns](https://www.amazon.com/Le
 ![image](https://github.com/teoMiesiac/mvp-vanilla-js/assets/21129815/1925066a-1e17-47c6-8333-7f4fae943840)
 
 
-- Model represents domain specific data. It's ignorant of the UI (Views, Controllers). When Model changes it notifies it's observers.
+- Model represents domain specific data. It's ignorant of the UI (Views, Presenters). When Model changes it notifies it's observers.
 - View represents current state of a Model and takes care of presentation. It's "dumb" and contain's little to no logic. Invocations from the View are delegated to Presenters.
 - Presenter role is to handle user interaction (key press, clicks) and making decisions for the View. It observes Models and updates Views when Model changes. 
 
