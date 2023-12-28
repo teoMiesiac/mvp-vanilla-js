@@ -1,14 +1,15 @@
-# MVC vanilla JS
+# MVP vanilla JS
 
-Project was inspired by [Learning JavaScript Patterns](https://www.amazon.com/Learning-JavaScript-Design-Patterns-Developers/dp/1098139879). It aims to implement oryginal MVC presented in 1979 using observer pattern.
+Project was inspired by [Learning JavaScript Patterns](https://www.amazon.com/Learning-JavaScript-Design-Patterns-Developers/dp/1098139879). It aims to implement oryginal MVP presented in 1990 using observer pattern.
 
 ## Architecture explanation
 
-<img width="1065" alt="image" src="https://github.com/teoMiesiac/mvc-vanilla-js/assets/21129815/67cb5e1b-ad50-4264-92cf-3694d98ed0eb">
+![image](https://github.com/teoMiesiac/mvp-vanilla-js/assets/21129815/1925066a-1e17-47c6-8333-7f4fae943840)
+
 
 - Model represents domain specific data. It's ignorant of the UI (Views, Controllers). When Model changes it notifies it's observers.
-- View represents current state of a Model and takes care of presentation. Observer pattern was used to let the View know whenever the Model was updated or modified.
-- Controller role is to handle user interaction (key press, clicks) and making decisions for the View.
+- View represents current state of a Model and takes care of presentation. It's "dumb" and contain's little to no logic. Invocations from the View are delegated to Presenters.
+- Presenter role is to handle user interaction (key press, clicks) and making decisions for the View. It observes Models and updates Views when Model changes. 
 
 ## Building and running on localhost
 
